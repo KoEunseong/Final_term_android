@@ -22,7 +22,7 @@ class Login : AppCompatActivity() {
         loginBtn.setOnClickListener {
             var isLogin : Boolean
         }
-        // test commit first
+        // test commit first2
 
         joinBtn.setOnClickListener {
             var intent = Intent(applicationContext, join::class.java)
