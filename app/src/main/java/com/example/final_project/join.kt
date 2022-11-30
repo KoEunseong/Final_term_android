@@ -5,8 +5,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
-class join : Activity() {
+class join : AppCompatActivity() {
     lateinit var name : EditText
     lateinit var email : EditText
     lateinit var btnEmailCheck :Button
