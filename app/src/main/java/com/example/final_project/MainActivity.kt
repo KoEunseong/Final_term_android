@@ -35,6 +35,7 @@ class MainActivity : TabActivity(){
 
 
         tabHost.currentTab = 0
+        //반영
 
     }
 }
