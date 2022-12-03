@@ -19,17 +19,17 @@ class MainActivity : TabActivity(){
         tabSpecHome.setContent(R.id.home) //여기서 인텐트 연결 하면 될듯
         tabHost.addTab(tabSpecHome)
 
-        intent = Intent(applicationContext,FindStudy::class.java)
+        intent = Intent(applicationContext,Search::class.java)
         var tabSpecFind = tabHost.newTabSpec("find").setIndicator("스터디 찾기")
         tabSpecFind.setContent(intent)
         tabHost.addTab(tabSpecFind)
 
-        intent = Intent(applicationContext,join::class.java)
+        intent = Intent(applicationContext,Login::class.java)
         var tabSpecRecord = tabHost.newTabSpec("record").setIndicator("학습 기록")
         tabSpecRecord.setContent(intent)
         tabHost.addTab(tabSpecRecord)
 
-        var tabSpecSettings = tabHost.newTabSpec("settings").setIndicator("설정")
+        var tabSpecSettings = tabHost.newTabSpec("settings").setIndicator("마이페이지")
         tabSpecSettings.setContent(R.id.settings)
         tabHost.addTab(tabSpecSettings)
 

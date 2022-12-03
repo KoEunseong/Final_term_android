@@ -13,7 +13,7 @@ class Profile :Activity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setContentView(R.layout.profile)
         // 위젯 연결
         tvName =findViewById<TextView>(R.id.tvName)
         tvSns =findViewById<TextView>(R.id.tvSns)
