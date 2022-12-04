@@ -15,6 +15,7 @@ class Post_regist : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.study_post_regist)
 
 
     }
