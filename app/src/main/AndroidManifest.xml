@@ -22,6 +22,7 @@
         <activity android:name=".FindStudy" android:label="findStudy 액티비티"/>
         <activity android:name=".Profile" android:label="profile 액티비티"/>
         <activity android:name=".Search" android:label="search 액티비티"/>
+        <activity android:name=".Post_regist" android:label="Post_regist 액티비티"/>
     </application>
 
 </manifest>
