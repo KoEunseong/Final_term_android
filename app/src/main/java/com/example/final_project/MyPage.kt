@@ -26,7 +26,7 @@ class MyPage : AppCompatActivity() {
         goLogin.setOnClickListener {
             intent = Intent(applicationContext,Login::class.java)
             startActivityForResult(intent,0)
-            //TEST
+            //TEST1
         }
     }
 
