@@ -29,15 +29,15 @@ class MainActivity : TabActivity(){
         tabSpecRecord.setContent(intent)
         tabHost.addTab(tabSpecRecord)
 
+        intent = Intent(applicationContext,MyPage::class.java)
         var tabSpecSettings = tabHost.newTabSpec("settings").setIndicator("마이페이지")
-        tabSpecSettings.setContent(R.id.settings)
+        tabSpecSettings.setContent(intent)
         tabHost.addTab(tabSpecSettings)
 
-        intent = Intent(applicationContext,Post_regist::class.java)
-        var tabSpecPost_regist = tabHost.newTabSpec("post_regist").setIndicator("스터디모집등록")
-        tabSpecPost_regist.setContent(intent)
-        tabHost.addTab(tabSpecPost_regist)
-
+//        intent = Intent(applicationContext,Post_regist::class.java)
+//        var tabSpecPost_regist = tabHost.newTabSpec("post_regist").setIndicator("스터디모집등록")
+//        tabSpecPost_regist.setContent(intent)
+//        tabHost.addTab(tabSpecPost_regist)
 
         tabHost.currentTab = 0
         //반영
