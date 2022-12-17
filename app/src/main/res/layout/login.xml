@@ -1,5 +1,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -37,10 +38,10 @@
 
     <ImageView
         android:id="@+id/imageMain"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="114dp"
+        android:layout_height="161dp"
         android:layout_marginBottom="41dp"
-        android:tint="@color/colorAccent"
+        android:src="@drawable/studying"
         app:layout_constraintBottom_toTopOf="@+id/login_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
