@@ -197,19 +197,20 @@
             app:layout_constraintRight_toLeftOf="@id/ll_buy">
 
             <ImageView
-                android:id="@+id/iv_sale"
+                android:id="@+id/iv_rateStudy"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="5dp"
+                android:src="@drawable/rate"
                 />
 
             <TextView
-                android:id="@+id/tv_sale"
+                android:id="@+id/tv_rateStudy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/sale_list"
+                android:text="스터디 평가"
                 android:textColor="@color/black"
                 android:textSize="16dp"/>
 
@@ -226,19 +227,20 @@
             app:layout_constraintRight_toLeftOf="@id/ll_favorite">
 
             <ImageView
-                android:id="@+id/iv_buy"
+                android:id="@+id/iv_friends"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="5dp"
+                android:src="@drawable/friend"
                 />
 
             <TextView
-                android:id="@+id/tv_buy"
+                android:id="@+id/tv_friends"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/buy_list"
+                android:text="친구목록"
                 android:textColor="@color/black"
                 android:textSize="16dp"/>
 
@@ -260,6 +262,7 @@
                 android:layout_height="35dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="5dp"
+                android:src="@drawable/heart"
                 />
 
             <TextView

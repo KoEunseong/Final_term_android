@@ -10,8 +10,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 class MyPage : AppCompatActivity() {
     lateinit var profileBtn: androidx.appcompat.widget.AppCompatButton
     lateinit var goLogin : TextView
-    lateinit var loginView: ConstraintLayout
-    lateinit var profileView: ConstraintLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +24,6 @@ class MyPage : AppCompatActivity() {
         goLogin.setOnClickListener {
             intent = Intent(applicationContext,Login::class.java)
             startActivityForResult(intent,0)
-            //TEST1
         }
     }
 
