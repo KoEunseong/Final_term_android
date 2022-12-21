@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".join" android:label="join 액티비티"/>
-        <activity android:name=".Login" android:label="Login 액티비티"/>
+        <activity android:name=".MainActivity" android:label="Login 액티비티"/>
         <activity android:name=".FindStudy" android:label="findStudy 액티비티"/>
         <activity android:name=".Profile" android:label="profile 액티비티"/>
         <activity android:name=".Search" android:label="search 액티비티"/>

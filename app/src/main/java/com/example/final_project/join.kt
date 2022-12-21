@@ -39,7 +39,7 @@ class join : AppCompatActivity() {
                 = findViewById(R.id.tmpbutton)
         tmpbutton.setOnClickListener {
             sqlDB = myHelper.writableDatabase
-            myHelper.onUpgrade(sqlDB, 1, 2) // 인수는 아무거나 입력하면 됨.
+            myHelper!!.onUpgrade(sqlDB, 1, 2) // 인수는 아무거나 입력하면 됨.
             sqlDB.close()
             Toast.makeText(applicationContext,"초기화.", Toast.LENGTH_SHORT).show()
         }

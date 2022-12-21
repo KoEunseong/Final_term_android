@@ -35,4 +35,12 @@ class MemberDBHelper(context: Context) : SQLiteOpenHelper(context, "memberDB.db"
         if(cursor.count <= 0) res = false
         return !res
     }
+
+    fun checkPassword(email: String, password: String) : Boolean {
+        val myDB = this.writableDatabase
+        var res = true
+        val cursor = myDB.rawQuery("select * from memberTBL where email = ? and password = ?",arrayOf(email, password))
+        if(cursor.count <= 0) res = false
+        return res
+    }
 }

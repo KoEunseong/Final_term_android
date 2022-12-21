@@ -39,7 +39,7 @@
             android:id="@+id/tvTeam"
             android:layout_height="wrap_content"
             android:layout_width="100dp"
-            android:text="학교 등"
+            android:text="학교 "
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
             />
