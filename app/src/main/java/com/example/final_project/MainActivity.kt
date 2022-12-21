@@ -34,13 +34,10 @@ class MainActivity : TabActivity(){
         tabSpecSettings.setContent(intent)
         tabHost.addTab(tabSpecSettings)
 
-//        intent = Intent(applicationContext,Post_regist::class.java)
-//        var tabSpecPost_regist = tabHost.newTabSpec("post_regist").setIndicator("스터디모집등록")
-//        tabSpecPost_regist.setContent(intent)
-//        tabHost.addTab(tabSpecPost_regist)
-
         tabHost.currentTab = 0
         //반영
+
+
 
     }
 }

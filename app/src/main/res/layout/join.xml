@@ -99,5 +99,11 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/delete"
         app:layout_constraintStart_toStartOf="parent" />
 
-
+    <Button
+        android:id="@+id/tmpbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="db 초기화"
+        app:layout_constraintBaseline_toBaselineOf="@+id/delete"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

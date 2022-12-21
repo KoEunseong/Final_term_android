@@ -1,6 +1,7 @@
 package com.example.final_project
 
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,6 +12,7 @@ class Login : AppCompatActivity() {
     lateinit var passWord : EditText
     lateinit var loginBtn : Button
     lateinit var joinBtn : Button
+    lateinit var sqlDB: SQLiteDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
@@ -22,7 +24,6 @@ class Login : AppCompatActivity() {
         loginBtn.setOnClickListener {
             var isLogin : Boolean
         }
-        // test commit first5
 
         joinBtn.setOnClickListener {
             var intent = Intent(applicationContext, join::class.java)
