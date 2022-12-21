@@ -24,7 +24,7 @@ class MainActivity : TabActivity(){
         tabSpecFind.setContent(intent)
         tabHost.addTab(tabSpecFind)
 
-        intent = Intent(applicationContext,Login::class.java)
+        intent = Intent(applicationContext,Study_record::class.java)
         var tabSpecRecord = tabHost.newTabSpec("record").setIndicator("학습 기록")
         tabSpecRecord.setContent(intent)
         tabHost.addTab(tabSpecRecord)
