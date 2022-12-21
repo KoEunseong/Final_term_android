@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="왼" />
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/record_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/record_text_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="체크박스"
+                        />
+                    <CheckBox
+                        android:id="@+id/record_text_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="체크박스"
+                        />
+                    <CheckBox
+                        android:id="@+id/record_text_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="체크박스"
+                        />
+                    <CheckBox
+                        android:id="@+id/record_text_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="체크박스"
+                        />
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="오" />
+    </LinearLayout>
+
+
+</LinearLayout>
