@@ -14,9 +14,9 @@ class MainActivity : TabActivity(){
         var tabHost = this.tabhost
         var intent : Intent
 
-
+        intent = Intent(applicationContext,Home::class.java)
         var tabSpecHome = tabHost.newTabSpec("home").setIndicator("홈")
-        tabSpecHome.setContent(R.id.home) //여기서 인텐트 연결 하면 될듯
+        tabSpecHome.setContent(intent) //여기서 인텐트 연결 하면 될듯
         tabHost.addTab(tabSpecHome)
 
         intent = Intent(applicationContext,Search::class.java)

@@ -17,6 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Home" android:label="home 액티비티"/>
         <activity android:name=".join" android:label="join 액티비티"/>
         <activity android:name=".MainActivity" android:label="Login 액티비티"/>
         <activity android:name=".FindStudy" android:label="findStudy 액티비티"/>

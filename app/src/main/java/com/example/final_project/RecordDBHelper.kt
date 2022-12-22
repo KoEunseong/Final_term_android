@@ -28,18 +28,42 @@ class RecordDBHelper(context: Context) : SQLiteOpenHelper(context, "recordDB.db"
         return true
     }
 
+    fun upgradeData(memberId : String?, date : String? , memo : String) : Unit {
+        val myDB = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put("memo",memo)
+        val result = myDB.update("recordTBL ",contentValues,"date = ? AND memberId = ?", arrayOf(date,memberId))
 
+        //var query = "UPDATE recordTBL SET memo = '"+memo+"' WHERE memberId ='"+memberId+"' AND date ='"+date+"';"
+        //myDB.execSQL(query)
 
+    }
 
-    fun checkMemo(date: String, memberId: String) : String {
+    fun checkMemo(date: String, memberId: String) : String? {
         val myDB = this.writableDatabase
         val cursor = myDB.rawQuery("select * from recordTBL where date = ? and memberId = ?",arrayOf(date, memberId))
-        var result =""
+        var result : String? = null
 
         while(cursor.moveToNext()){
             result = cursor.getString(2)
         }
         return result
+    }
 
+    fun selectMemoById(memberId: String) : ArrayList<MemoByMemberIdInfo> {
+        val myDB = this.writableDatabase
+        val cursor = myDB.rawQuery("select * from recordTBL where memberId = ?",arrayOf(memberId))
+
+        var arrayList = ArrayList<MemoByMemberIdInfo>(2)
+
+        while(cursor.moveToNext()){
+            var memoByMemberIdInfo  = MemoByMemberIdInfo()
+
+            memoByMemberIdInfo.date = cursor.getString(1)
+            memoByMemberIdInfo.memo = cursor.getString(2)
+
+            arrayList.add(memoByMemberIdInfo)
+        }
+        return arrayList
     }
 }

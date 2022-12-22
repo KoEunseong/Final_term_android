@@ -50,11 +50,21 @@ class Study_record :Activity() {
             var memoDB = editMemo.text.toString()
 
             // 조회 했을때 값 없으면 insert
-            var memo = myHelper.checkMemo(date,"1")
+            var memo : String? = myHelper.checkMemo(date,"1")
 
             //memoDB = memoDB + memo
             sqlDB = myHelper.writableDatabase
-            myHelper.insertData("1",date,memoDB)
+
+           // myHelper.onUpgrade(sqlDB,0,1)
+
+
+            if(memo == null){
+                myHelper.insertData("1",date,memoDB)
+            }else{
+                myHelper.upgradeData("1",date,memoDB)
+            }
+
+
 
             // 조회 했을때 값 있으면 upgrade
             Toast.makeText(this,"추가되었습니다",Toast.LENGTH_SHORT).show()
