@@ -21,7 +21,7 @@
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="293dp" />
     <TextView
         android:id="@+id/textCalendar"
         android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
             android:id="@+id/edMemo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lines="10"
+            android:lines="7"
 
             />
     </LinearLayout>
