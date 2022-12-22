@@ -4,64 +4,61 @@ import android.app.Activity
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.widget.*
+import androidx.core.view.get
+import kotlinx.android.synthetic.main.study_record.*
 
 class Study_record :Activity() {
 
-    lateinit var calendarview :CalendarView
-    lateinit var recordView : LinearLayout
-
-    lateinit var myHelper: RecordDBHelper
-    lateinit var sqlDB: SQLiteDatabase
-
+    lateinit var myHelper : RecordDBHelper
+    lateinit var calendarView: CalendarView
+    lateinit var textCalendar : TextView
+    lateinit var editMemo : EditText
     lateinit var insertBtn : Button
-    lateinit var editTv : EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.study_record)
 
-        var year :String
-        var month : String
-        var dayOfMonth : String
-        var date1 : String
-        var memo : String
+        myHelper = RecordDBHelper(this)
 
-        var selectMemo =""  // db에서 날짜별 회원 정보로 memo 조회
-
-        calendarview = findViewById<CalendarView>(R.id.calendarView)
-
-        calendarview.setOnDateChangeListener { calendarView, i, i2, i3 ->
-            year = i.toString()
-            month= (i2+1).toString()
-            dayOfMonth = i3.toString()
-
-            Toast.makeText(this, year + "년 " + month  + "월 " + dayOfMonth + "일", Toast.LENGTH_SHORT).show();
-
-            date1 = year+"-"+month+"-"+dayOfMonth
-
-            // db에서 날짜별 메모 조회
-            memo = myHelper!!.selectMemoAndDate(1,date1)
-            editTv.setText(memo)
-
-
-            myHelper.close()
-        }
-
+        calendarView = findViewById<CalendarView>(R.id.calendarView)
+        textCalendar = findViewById<TextView>(R.id.textCalendar)
+        editMemo = findViewById<EditText>(R.id.edMemo)
         insertBtn = findViewById<Button>(R.id.insetBtn)
 
-        insertBtn.setOnClickListener {
-            editTv = findViewById<EditText>(R.id.ed1Text)
-            memo = selectMemo + editTv.text.toString()
+        var sqlDB : SQLiteDatabase
 
-            // 캘린더 뷰에서 날짜값 가져오기
+        calendarView.setOnDateChangeListener { calendarView, i, i2, i3 ->
+            var year = i.toString()
+            var month = (i2+1).toString()
+            var dayOfMonth=i3.toString()
+            myHelper.writableDatabase
 
-            // db에 INSERT
+            var date = year+"-"+month+"-"+dayOfMonth
 
+            textCalendar.text = date
 
-            Toast.makeText(this,"메모가 추가되었습니다",Toast.LENGTH_SHORT).show()
+            // memberId, date 로 조회
+            var memo = myHelper.checkMemo(date,"1")
 
-            myHelper!!.insertData(1,"2022-12-22",memo)
-            myHelper.close()
+            editMemo.setText(memo)
         }
+
+        insertBtn.setOnClickListener {
+            var date = textCalendar.text.toString()
+
+            var memoDB = editMemo.text.toString()
+
+            // 조회 했을때 값 없으면 insert
+            var memo = myHelper.checkMemo(date,"1")
+
+            //memoDB = memoDB + memo
+            sqlDB = myHelper.writableDatabase
+            myHelper.insertData("1",date,memoDB)
+
+            // 조회 했을때 값 있으면 upgrade
+            Toast.makeText(this,"추가되었습니다",Toast.LENGTH_SHORT).show()
+        }
+
     }
 }
