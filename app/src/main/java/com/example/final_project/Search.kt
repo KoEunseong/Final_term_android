@@ -42,7 +42,8 @@ class Search : AppCompatActivity() {
                 dlgContent = dialogView.findViewById(R.id.dlgEdt2)
                 studyList.add(0, Study(dlgSubject.text.toString(), dlgContent.text.toString()))
                 Toast.makeText(applicationContext,"등록 완료", Toast.LENGTH_SHORT).show()
-                searchView.setOnQueryTextListener(searchViewTextListner)
+                setAdapter()
+                adapter.notifyDataSetChanged()
             }
             dlg.setNegativeButton("취소", null)
 
