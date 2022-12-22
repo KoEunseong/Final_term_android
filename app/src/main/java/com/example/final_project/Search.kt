@@ -47,7 +47,7 @@ class Search : AppCompatActivity() {
             dlg.setNegativeButton("취소", null)
 
             dlg.show()
-            //test
+            //test2
 
         }
 
