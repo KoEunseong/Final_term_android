@@ -29,9 +29,10 @@ class MainListAdapter (var study: ArrayList<Study>, var con: Context) : Recycler
                     var study = filteredStudy[position]
                     setTitle(study.subject)
                     setMessage(study.contentOfStudy)
-                    setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
-                        Toast.makeText(con, "OK Button Click", Toast.LENGTH_SHORT).show()
+                    setPositiveButton("신청", DialogInterface.OnClickListener { dialog, which ->
+                        Toast.makeText(con, "신청 되었습니다.", Toast.LENGTH_SHORT).show()
                     })
+                    setNegativeButton("취소",null)
                     show()
                 }
             }

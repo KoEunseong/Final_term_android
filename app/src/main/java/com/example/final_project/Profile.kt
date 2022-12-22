@@ -9,7 +9,6 @@ class Profile :Activity(){
     lateinit var tvName : TextView  // 이름
     lateinit var tvSns : TextView   // SNS
     lateinit var tvTeam : TextView  // 소속(학교, 회사)
-    lateinit var tvBlank : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +17,6 @@ class Profile :Activity(){
         tvName =findViewById<TextView>(R.id.tvName)
         tvSns =findViewById<TextView>(R.id.tvSns)
         tvTeam =findViewById<TextView>(R.id.tvTeam)
-        tvBlank =findViewById<TextView>(R.id.tvBlank)
 
 
 

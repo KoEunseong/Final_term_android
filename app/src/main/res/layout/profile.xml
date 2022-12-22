@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/ko"
         android:layout_marginTop="80dp"
         android:layout_marginBottom="20dp"
         app:civ_border_width="2dp" />
@@ -23,34 +23,27 @@
             android:id="@+id/tvName"
             android:layout_height="wrap_content"
             android:layout_width="100dp"
-            android:text="이름"
-            android:layout_gravity="center"
+            android:text="이름: 고은성"
+            android:layout_gravity="left"
             android:layout_marginBottom="30dp"
             />
         <TextView
             android:id="@+id/tvSns"
             android:layout_height="wrap_content"
             android:layout_width="100dp"
-            android:text="sns"
-            android:layout_gravity="center"
+            android:text="전화번호 : 010-1111-2222"
+            android:layout_gravity="left"
             android:layout_marginBottom="30dp"
             />
         <TextView
             android:id="@+id/tvTeam"
             android:layout_height="wrap_content"
             android:layout_width="100dp"
-            android:text="학교 "
-            android:layout_gravity="center"
+            android:text="학교 : 동아대"
+            android:layout_gravity="left"
             android:layout_marginBottom="30dp"
             />
-        <TextView
-            android:id="@+id/tvBlank"
-            android:layout_height="wrap_content"
-            android:layout_width="100dp"
-            android:text="빈칸"
-            android:layout_gravity="center"
-            android:layout_marginBottom="30dp"
-            />
+
 
 
     </LinearLayout>
@@ -65,7 +58,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="기능사"
+            android:text="컴활 1급"
             />
         <Button
             android:layout_width="wrap_content"
